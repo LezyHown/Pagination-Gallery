@@ -1,0 +1,61 @@
+.pegination-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.pegination{
+    display: flex;
+    width: 600px;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    #prev-page, #next-page, .page-num{
+        cursor: pointer;
+        display: flex;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(38, 35, 35);
+        margin-right: 1rem;
+        color: white;
+        border-radius: 12px;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.15s ease-in-out;
+        box-shadow: 0 3px 13px rgb(27, 27, 27);
+
+        &:hover{
+            width: 66px;
+            background-color: rgb(36, 33, 33);
+            opacity: 95%;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    .page-num{
+        &:hover{ 
+            background-image: linear-gradient(120deg, #e67373, #8140f2);
+            background-position: center;
+        }
+    }
+
+    .active{
+        background-image: linear-gradient(-10deg, #cd4444, #6d33d1);
+        opacity: 0.8;
+    }
+    
+    #prev-page, #next-page{
+        &:hover{
+            width: 50px;
+            border-radius: 12px;
+        }
+    }
+
+    #prev-page::after{
+        content: '‹';
+    }
+    #next-page::after{
+        content: '›';
+    }
+}

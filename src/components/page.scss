@@ -1,0 +1,28 @@
+.main-page{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 15px 0 15px;
+
+    justify-content: space-around;
+
+    *{
+        transition: all 0.35s ease-in-out;
+    }
+
+    img{
+        flex: 1 0 15%;
+        margin: 2rem;
+        max-width: 280px;
+        height: 350px;
+        border-radius: 12px;
+        border: 1px solid black;
+        image-rendering: optimizeQuality;
+        object-fit: cover;
+
+        &:hover{
+            filter: contrast(1.025) drop-shadow(0 3px 4px rgb(26, 25, 25));
+            border: none;
+            transition: all 0.35s ease-in-out;
+        }
+    }
+}
