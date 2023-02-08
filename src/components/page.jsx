@@ -20,10 +20,9 @@ export default function Page(props) {
         images !== null ? 
           images.slice(startIndex, lastIndex).map(_img =>
               <motion.img animate={{ rotate: '3deg' }} 
-              onLoadStart={() => setLoaded(false)} 
               onLoad={() => setTimeout(() => setLoaded(true), random({options:{min: 500, max: 3000}}))} 
               src={ !isLoaded ? loadGif : _img.src.large2x}/> 
-          ) : <span className='err-msg'>Sorry, can't load images...</span>
+          ) : <span className='err-msg'>Sorry, failed to load images...</span>
       }
     </div>
   )
